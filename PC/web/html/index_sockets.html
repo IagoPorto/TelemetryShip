@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Barquito</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/png" href="../image/velero.png">
+        <link rel="stylesheet" type="text/css" href="../css/dolphin.css">
+    </head>
+
+    <body>
+        <div id="dist"></div>
+        <div id="accel"></div>
+        <div id="gyro"></div>
+        <div id="magnet"></div>
+
+        <div id = "container">
+            <iframe id = "videoStream" src = ""></iframe>
+        </div>
+
+        <div>
+            <canvas id = "myChart" width = "400" height = "200"></canvas>
+        </div>
+
+        <audio id = "alertSound" src = "../sound/pitido.mp3" preload= "auto"></audio>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type = "text/javascript" src = "../js/DataStreamSocket.js"></script>
+        <script type = "text/javascript" src = "../js/VideoStream.js"></script>
+        <script type = "text/javascript" src = "../js/Chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+    </body>
+</html>

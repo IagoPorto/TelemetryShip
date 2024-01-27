@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Barquito</title>
+        <link rel="icon" type="image/png" href="../image/velero.png">
+        <link rel="stylesheet" type="text/css" href="../css/dolphin.css">
+        <!-- Agrega la biblioteca de Plotly -->
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <h1>El barquito está navegando:</h1>
+        <div id="dist"></div>  
+        <div id="accel"></div>  
+        <div id="gyro"></div>  
+        <div id="magnet"></div>
+        <div id="container">
+            <iframe id="videoStream" src=""></iframe>
+        </div>
+        <div>
+            <canvas id="myChart" width="400" height="200"></canvas>
+        </div>
+        <audio id="alertSound" src="../sound/pitido.mp3" preload="auto"></audio>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script type="text/javascript" src="../js/DataStream.js"></script>
+        <script type="text/javascript" src="../js/VideoStream.js"></script>
+        <script type="text/javascript" src="../js/Chart.js"></script>
+        <script type="text/javascript" src="../js/VisualizacionDatos.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.3/socket.io.js"></script>
+
+
+        <div>
+            <form id="formulario" action="http://localhost:5000/visualizar_datos" method="post">
+                <label for="inicio_rango">Inicio del rango:</label>
+                <input type="datetime-local" id="inicio_rango" name="inicio_rango" required>
+                <br>
+                <label for="fin_rango">Fin del rango:</label>
+                <input type="datetime-local" id="fin_rango" name="fin_rango" required>
+                <br>
+                <label>Variables:</label>
+                <br>
+                <input type="checkbox" id="distancia" name="archivos" value="distancia">
+                <label for="distancia">Distancia</label>
+                <br>
+                <input type="checkbox" id="aceleracion" name="archivos" value="aceleracion">
+                <label for="aceleracion">Aceleración</label>
+                <br>
+                <input type="checkbox" id="giroscopio" name="archivos" value="giroscopio">
+                <label for="giroscopio">Giroscopio</label>
+                <br>
+                <input type="checkbox" id="magnetismo" name="archivos" value="magnetismo">
+                <label for="magnetismo">Magnetismo</label>
+                <br> 
+                <button type="submit">Visualizar las gráficas</button>
+            </form>
+        </div>
+
+    </body>
+</html>

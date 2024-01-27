@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #003950;
+}
+
+h1 {
+    color: #ffcefb;
+}
+
+div{
+    color: #00e4ff;
+}
+
+#container {
+    width: 1200px;
+    height: 600px;
+    border: 2px solid #ffcefb;
+    overflow: hidden;
+    margin: 20px;
+}
+
+#videoStream {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #ffffff;
+}
+
+#myChart {
+    max-width: 100%; /* Asegura que el gráfico no exceda el ancho del contenedor */
+    position: relative;
+    background-color: #003950;
+    border-color: #ffcefb;
+    border-width: 3;
+    margin: auto;
+    height: 80%; /* Ajusta la altura según tus necesidades */
+    width: 80%;
+    fill: false;
+}
